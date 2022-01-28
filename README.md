@@ -1,6 +1,6 @@
 # id-est
 
-`id-est` is a lightweight backwards-compatible User Agent simplifier:
+`id-est` is a lightweight way to simplify User Agent strings:
 
 i.e. which browser, which version, which operating system is it?
 
@@ -9,9 +9,8 @@ i.e. which browser, which version, which operating system is it?
 
 Include the JS
 
-
 ```
-simplifyUserAgent(navigator.userAgent);
+simplifiedUserAgent(navigator.userAgent);
 ```
 
 
