@@ -70,7 +70,7 @@ simplifyUserAgent(navigator.userAgent);
 </script>
 ```
 
-When library package is used as a CommonJS package, this function is available as the admittedly somewhat redundant:
+When this library is used as a CommonJS package, this function is available as the admittedly somewhat redundant:
 
 ```
 var simplifyUserAgent = require('simplify-user-agent').simplifyUserAgent;
@@ -136,7 +136,7 @@ simplifyUserAgent();      // TypeError: simplifyUserAgent is not a function!
 
 Please be careful to include `simplify-ua.js` **before** `check-ua.js` when you do use both files together.
 
-When library package is used as a CommonJS package, the functions are available as exports e.g.:
+When this library is used as a CommonJS package, the functions are available as exports e.g.:
 
 ```
 var compareVersions = require('simplify-user-agent').compareVersions;
