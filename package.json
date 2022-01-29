@@ -17,5 +17,11 @@
   ],
   "author": "Nathan Vander Wilt",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "bugs": {
+    "url": "https://github.com/natevw/id-est/issues"
+  },
+  "homepage": "https://github.com/natevw/id-est#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
