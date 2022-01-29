@@ -2,8 +2,8 @@
 function id_est_compareVersions(aVersion, bVersion) {   // so: 1.0.0 < 1.0.1, but 1 == 1.0.1
   function varr(v) { return v.split('.').map(function (s) { return isNaN(s) ? s : +s; }); }
 
-  var aa = varr(aVersion),
-      bb = varr(bVersion),
+  var aa = varr(aVersion || ''),
+      bb = varr(bVersion || ''),
       len = Math.min(aa.length, bb.length);
   for (var idx = 0; idx < len; idx++) {
     var a = aa[idx], b = bb[idx];
