@@ -21,4 +21,11 @@ console.log(" browserIsMatch check:", [
   _.browserIsMatch({v:'3.2.1',app:'UA'}, {$any:[{app:'IE'},{app:'UA'}]}),
   _.browserIsMatch({v:'3.2.1',app:'UA'}, {$all:[{app:'UA'},{v:'3.2.1'}]}),
   _.browserIsMatch({v:'3.2.1',app:'UA'}, {$all:[{app:'UA'},{$not:{app:'IE'}}]}),
+  _.browserIsMatch({v:'96.0.3'}, {$at:'96'}),
+  _.browserIsMatch({v:'96.0.3'}, {$gt:'96.0.2'}),
+  _.browserIsMatch({v:'96.0.3'}, {$not:{$lt:'96'}}),
+  _.browserIsMatch({browser:"Firefox", v:'96.0.3'}, {$any:[
+    {browser:"Firefox", $gt:'90.0'},
+    {browser:"Internet Explorer", $lt:'12'},
+  ]}),
 ].every(Boolean) ? "okay" : "BAD RESULT!");
