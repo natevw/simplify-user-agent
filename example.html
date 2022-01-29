@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Simplified User Agent example</title>
+  <script src="simplify-ua.js"></script>
+</head><body>
+  <h1>Hello.</h1>
+  <p>
+  <script>
+    var ua = simplifiedUserAgent(navigator.userAgent);
+    console.log("Browser:", ua.app);
+    console.log("Version:", ua.v);
+    console.log("System:", ua.os);
+    document.write("Are you using "+ua.app+" version "+ua.v+", on "+ua.os+"?");
+  </script>
+  </p>
+</body></html>
