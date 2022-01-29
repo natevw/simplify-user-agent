@@ -1,14 +1,13 @@
-# id-est: simplified browser User Agent helper library
+# simplify-user-agent: simplified browser User Agent helper library
 
-`id-est` is a lightweight way to simplify User Agent strings:
+`simplify-user-agent` is a lightweight way to simplify User Agent strings:
 
 i.e. which browser, which version, which operating system is it?
 
-It can also help you match against certain simple checks:
+It can also help you specify matching logic based on some simplified checks:
 
-e.g. browser is Chrome or Firefox or Internet Explorer after version 8.
+e.g. is the browser "Chrome or Firefox or Internet Explorer after version 8"?
 
-(but `exempli-gratia` would have been an even weirder name.)
 
 ## Example usage
 
@@ -20,7 +19,7 @@ but the older browsers you might be concerned about do not. So classic style it 
 ```
 <script src="simplify-ua.js"></script>
 <script>
-  var uaInfo = id_est_simplifyUserAgent(navigator.userAgent);
+  var uaInfo = simplifyUserAgent(navigator.userAgent);
   console.log("Browser:", uaInfo.browser);
   console.log("Version:", uaInfo.version);
   console.log("Platform:", uaInfo.platform);
@@ -40,8 +39,8 @@ To help with this, this project has an additional library for *matching* in simp
 <script src="simplify-ua.js"></script>
 <script src="check-ua.js"></script>
 <script>
-  var ua = id_est_simplifyUserAgent(navigator.userAgent);
-  if (id_est_browserIsMatch(ua, { $any: [
+  var ua = simplifyUserAgent(navigator.userAgent);
+  if (simplifyUserAgent.browserIsMatch(ua, { $any: [
     {browser: "Internet Explorer", $lt: '11'},
     {browser: "Safari", $lt: '13'},
     {browser: "Opera", os: "Linux"},
@@ -62,7 +61,32 @@ Also, if you like this library you might love the new [Navigator.userAgentData](
 
 ## Simplification details
 
-The `simplify-ua.js` file provides one function: `id_est_simplifyUserAgent`. It is unprefixed when this package is `require`d via CommonJS.
+When included directly in a page, the `simplify-ua.js` file exposes a global function, `simplifyUserAgent()`:
+
+```
+<script src="simplify-ua.js"></script>
+<script>
+simplifyUserAgent(navigator.userAgent);
+</script>
+```
+
+When library package is used as a CommonJS package, this function is available as the admittedly somewhat redundant:
+
+```
+var simplifyUserAgent = require('simplify-user-agent').simplifyUserAgent;
+
+// …
+```
+
+Or using newer syntax:
+
+```
+const { simplifyUserAgent } = require('simplify-user-agent');
+
+// … elsewhere in your code …
+simplifyUserAgent(someRequest.headers['user-agent']);
+```
+
 
 ### `simplifyUserAgent(fullString)`
 
@@ -97,7 +121,33 @@ This does not always lead to a clear decision. Disputes and discussions are welc
 
 ## Matching details
 
-The `check-ua.js` file provides two functions: `id_est_compareVersions` and `id_est_browserIsMatch`. They are unprefixed when this package is `require`d via CommonJS.
+When included directly in a page, the `check-ua.js` file hooks up two additional functions `simplifyUserAgent.compareVersions()` and `simplifyUserAgent.browserIsMatch()`.
+
+Note that if you *haven't* included the main `simplifyUserAgent()` function a stub object will be created e.g.:
+
+```
+<script src="check-ua.js"></script>
+<script>
+simplifyUserAgent.compareVersions('1.2.3', '3.2.1');   // → `-1`
+
+simplifyUserAgent();      // TypeError: simplifyUserAgent is not a function!
+</script>
+```
+
+Please be careful to include `simplify-ua.js` **before** `check-ua.js` when you do use both files together.
+
+When library package is used as a CommonJS package, the functions are available as exports e.g.:
+
+```
+var compareVersions = require('simplify-user-agent').compareVersions;
+compareVersions('1.2.3', '2.4.6.8');
+
+// OR…   (newer syntax below, using a different export)
+
+const { browserIsMatch } = require('simplify-user-agent');
+let someInfo = …, someCriteria = …;
+browserIsMatch(someInfo, someCriteria);
+```
 
 ### `compareVersions(a, b)`
 

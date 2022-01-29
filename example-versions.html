@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Simplified User Agent example</title>
+  <script src="check-ua.js"></script>
+</head><body>
+  <h1>Some Facts About Versions</h1>
+  <p>
+  <script>
+    var vvvv = [
+      ['1.2.3', '4.5-rc1'],
+      ['1.2.3', '1'],
+      ['4.5.1', '4.5.1'],
+      ['1.3.beta', '1.3'],
+    ];
+    var LABELS = {
+       '0': "equivalent to",
+      '-1': "earlier than",
+      '+1': "later than",
+    };
+
+    var i = Math.floor(Math.random() * vvvv.length),
+        vv = vvvv[i],
+        res = simplifyUserAgent.compareVersions(vv[0], vv[1]);
+    document.write([vv[0], "is", LABELS[res], vv[1]].join(' '));
+  </script>
+  </p>
+</body></html>

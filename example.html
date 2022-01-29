@@ -3,11 +3,12 @@
   <meta charset="utf-8">
   <title>Simplified User Agent example</title>
   <script src="simplify-ua.js"></script>
+  <script src="check-ua.js"></script>
 </head><body>
   <h1>Hello.</h1>
   <p>
   <script>
-    var uaInfo = id_est_simplifyUserAgent(navigator.userAgent);
+    var uaInfo = simplifyUserAgent(navigator.userAgent);
     console.log("Browser:", uaInfo.browser);
     console.log("Version:", uaInfo.version);
     console.log("System:", uaInfo.platform);
@@ -15,6 +16,12 @@
       "Are you using " + uaInfo.browser +
       " version " + uaInfo.version + ", on " + uaInfo.platform + "?"
     );
+
+    if (simplifyUserAgent.browserIsMatch(uaInfo, {$at:'999'})) {
+      alert("Wow!");
+    } else {
+      console.log("Your browser does NOT have an unlikely version number.");
+    }
   </script>
   </p>
 </body></html>

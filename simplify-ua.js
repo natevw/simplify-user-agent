@@ -1,4 +1,4 @@
-function id_est_simplifyUserAgent(rawUA) {
+function simplifyUserAgent(rawUA) {
   // expedient parse of http://tools.ietf.org/html/rfc2616#section-14.43
   var products = [],
       comments = [],
@@ -60,5 +60,5 @@ function id_est_simplifyUserAgent(rawUA) {
 }
 
 if (typeof window === 'undefined') {
-  module.exports = id_est_simplifyUserAgent;
+  module.exports = simplifyUserAgent;
 }

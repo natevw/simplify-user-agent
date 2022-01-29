@@ -1,6 +1,6 @@
 {
-  "name": "id-est",
-  "version": "1.0.0-alpha",
+  "name": "simplify-user-agent",
+  "version": "1.0.0-beta",
   "description": "navigator.userAgent string parsing and matching helpers",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/natevw/id-est.git"
+    "url": "git://github.com/natevw/simplify-user-agent.git"
   },
   "keywords": [
     "browser",
@@ -18,9 +18,9 @@
   "author": "Nathan Vander Wilt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/natevw/id-est/issues"
+    "url": "https://github.com/natevw/simplify-user-agent/issues"
   },
-  "homepage": "https://github.com/natevw/id-est#readme",
+  "homepage": "https://github.com/natevw/simplify-user-agent#readme",
   "directories": {
     "test": "tests"
   }
