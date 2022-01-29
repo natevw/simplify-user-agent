@@ -1,4 +1,4 @@
-# simplify-user-agent: simplified browser User Agent helper library
+# simplify-user-agent: parsing/matching helpers for browser user agent strings
 
 `simplify-user-agent` is a lightweight way to simplify User Agent strings:
 
