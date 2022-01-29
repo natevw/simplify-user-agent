@@ -1,0 +1,21 @@
+{
+  "name": "id-est",
+  "version": "1.0.0-pre-alpha",
+  "description": "navigator.userAgent string parsing and matching helpers",
+  "main": "main.js",
+  "scripts": {
+    "test": "node tests/ua.js && node tests/vv.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/natevw/id-est.git"
+  },
+  "keywords": [
+    "browser",
+    "debugging",
+    "localization"
+  ],
+  "author": "Nathan Vander Wilt",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
