@@ -20,12 +20,12 @@ but the older browsers you might be concerned about do not. So classic style it 
 ```
 <script src="simplify-ua.js"></script>
 <script>
-  var ua = id_est_simplifyUserAgent(navigator.userAgent);
-  console.log("Browser:", ua.app);
-  console.log("Version:", ua.v);
-  console.log("Platform:", ua.os);
+  var uaInfo = id_est_simplifyUserAgent(navigator.userAgent);
+  console.log("Browser:", uaInfo.browser);
+  console.log("Version:", uaInfo.version);
+  console.log("Platform:", uaInfo.platform);
 
-  if (ua.app === "Internet Explorer" && ua.v < "9") { // BUG!!
+  if (uaInfo.browser === "Internet Explorer" && uaInfo.version < "9") { // BUG!!
     alert("You're using a fairly old version of IE!");
   }
 </script>
@@ -42,9 +42,9 @@ To help with this, this project has an additional library for *matching* in simp
 <script>
   var ua = id_est_simplifyUserAgent(navigator.userAgent);
   if (id_est_browserIsMatch(ua, { $any: [
-    {app: "Internet Explorer", $lt: '11'},
-    {app: "Safari", $lt: '13'},
-    {app: "Opera", os: "Linux"},
+    {browser: "Internet Explorer", $lt: '11'},
+    {browser: "Safari", $lt: '13'},
+    {browser: "Opera", os: "Linux"},
   ]}) alert("Please consider upgrading your browser!");
 </script>
 ```

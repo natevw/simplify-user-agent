@@ -7,11 +7,14 @@
   <h1>Hello.</h1>
   <p>
   <script>
-    var ua = id_est_simplifyUserAgent(navigator.userAgent);
-    console.log("Browser:", ua.app);
-    console.log("Version:", ua.v);
-    console.log("System:", ua.os);
-    document.write("Are you using "+ua.app+" version "+ua.v+", on "+ua.os+"?");
+    var uaInfo = id_est_simplifyUserAgent(navigator.userAgent);
+    console.log("Browser:", uaInfo.browser);
+    console.log("Version:", uaInfo.version);
+    console.log("System:", uaInfo.platform);
+    document.write(
+      "Are you using " + uaInfo.browser +
+      " version " + uaInfo.version + ", on " + uaInfo.platform + "?"
+    );
   </script>
   </p>
 </body></html>
