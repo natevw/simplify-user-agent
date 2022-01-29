@@ -11,6 +11,9 @@ module.exports = [{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:96.0) Gecko/20100101 Firefox/96.0",
   est: {},
 },{
+  id: "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko",
+  est: {app:"Internet Explorer", v:"11.0"},
+},{
   id: "nope",
   est: {}
 }];
