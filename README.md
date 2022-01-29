@@ -20,7 +20,7 @@ but the older browsers you might be concerned about do not. So classic style it 
 ```
 <script src="simplify-ua.js"></script>
 <script>
-  var ua = simplifiedUserAgent(navigator.userAgent);
+  var ua = id_est_simplifyUserAgent(navigator.userAgent);
   console.log("Browser:", ua.app);
   console.log("Version:", ua.v);
   console.log("Platform:", ua.os);
@@ -32,16 +32,16 @@ but the older browsers you might be concerned about do not. So classic style it 
 ```
 
 But there's a bug in that logic, because a version string like "11.0.19042.1266" will
-**also** trigger the alert — even though it's newer than the intended IE9.
+**also** trigger the alert — even though it's newer than the intended IE9. What to do?
 
-This project has an additional library you can use to match specific criteria:
+To help with this, this project has an additional library for *matching* in simplified form. You can check to see if a browser matches specific criteria:
 
 ```
 <script src="simplify-ua.js"></script>
 <script src="check-ua.js"></script>
 <script>
-  var ua = simplifiedUserAgent(navigator.userAgent);
-  if (idEstMatch(ua, { $any: [
+  var ua = id_est_simplifyUserAgent(navigator.userAgent);
+  if (id_est_browserIsMatch(ua, { $any: [
     {app: "Internet Explorer", $lt: '11'},
     {app: "Safari", $lt: '13'},
     {app: "Opera", os: "Linux"},
@@ -62,12 +62,12 @@ Also, if you like this library you might love the new [Navigator.userAgentData](
 
 ## Simplification details
 
-The `simplify-ua.js` file provides one function: `id_est_simplifiedUserAgent`
+The `simplify-ua.js` file provides one function: `id_est_simplifyUserAgent`
 
 
 ## Matching details
 
-The `check-ua.js` file provides two functions: `id_est_compareVersions` and `id_est_browserMatches`
+The `check-ua.js` file provides two functions: `id_est_compareVersions` and `id_est_browserIsMatch`
 
 
 ## MIT License, etc.
