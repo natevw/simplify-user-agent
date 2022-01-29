@@ -7,6 +7,12 @@ console.log("compareVersions check:", [
   _.compareVersions('1.0.1', '1') === 0,
   _.compareVersions('', '1') === -1,
   _.compareVersions('1', '') === +1,
+
+  _.compareVersions('1.0.0', '1.1.1') === -1,
+  _.compareVersions('1.1.1', '1.0.0') === +1,
+  _.compareVersions('1.1', '1.1.1') === 0,
+  _.compareVersions('1', '1.1.1') === 0,
+  _.compareVersions('1.0', '1.1.1') === -1,
 ].every(Boolean) ? "okay" : "BAD RESULT!");
   
 console.log(" browserIsMatch check:", [
