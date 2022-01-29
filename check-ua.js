@@ -23,7 +23,7 @@ function id_est_browserIsMatch(object, criteria) {
   else if ('$any' in criteria) return criteria.$any.some(matches);
   else if ('$all' in criteria) return criteria.$all.every(matches);
   else return Object.keys(criteria).every(function (key) {
-    if (key in CMP) return id_est_compareVersions(object.v, criteria[key]) === CMP[key];
+    if (key in CMP) return id_est_compareVersions(object.version, criteria[key]) === CMP[key];
     else return object[key] === criteria[key];
   });
 }

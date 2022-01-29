@@ -52,7 +52,11 @@ function id_est_simplifyUserAgent(rawUA) {
   if (ua.os && !ua.os.indexOf('iP')) ua.os = 'iOS';
   if (ua.os === 'Macintosh') ua.os = 'macOS';
   
-  return ua;
+  return {
+    browser: ua.app,
+    version: ua.v,
+    platform: ua.os
+  };
 }
 
 if (typeof window === 'undefined') {
