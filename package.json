@@ -1,6 +1,6 @@
 {
   "name": "id-est",
-  "version": "1.0.0-pre-alpha",
+  "version": "1.0.0-alpha",
   "description": "navigator.userAgent string parsing and matching helpers",
   "main": "main.js",
   "scripts": {
