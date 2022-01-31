@@ -30,10 +30,12 @@ function simplifyUserAgent(rawUA) {
       if (prev.app === 'Version') ua.v = prev.v;
       else if (prev.app === 'Chrome') ua = prev;
     }
-  } else if (comments.length && (ua = comments[0].match(/MSIE ([0-9.]+)/))) {
+  } else if (comments.length && (
+    (ua = comments[0].match(/rv:([0-9.]+)/)) ||
+    (ua = comments[0].match(/MSIE ([0-9.]+)/))
+  )) {
     // IE and most Trident wrappers pack *everything* into a comment
     ua = {app:"Internet Explorer", v:ua[1]};
-    // TODO: guess name for miscellaneous Trident wrappers
   } else {
     ua = products[0] || {};
     if (ua.app === 'Mozilla') ua.app = "Netscape";
@@ -44,6 +46,7 @@ function simplifyUserAgent(rawUA) {
     var parts = comments[0].split(/;\s*/);
     //console.log(parts);
     if (parts[0] === 'compatible' && parts.length > 2) ua.os = parts[2];
+    else if (parts[1] === 'Trident/7.0' && (parts = parts[0].split(', ')).length > 2) ua.os = parts[2];
     else if (parts[0] === 'Linux' && parts.length > 2) ua.os = parts[2];
     else ua.os = parts[0];
   }

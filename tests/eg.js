@@ -11,8 +11,12 @@ module.exports = [{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:96.0) Gecko/20100101 Firefox/96.0",
   est: {},
 },{
+  // see // https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537503(v=vs.85)?redirectedfrom=MSDN
   id: "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko",
-  est: {browser:"Internet Explorer", version:"11.0"},
+  est: {browser:"Internet Explorer", version:"11.0", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
+  est: {browser:"Internet Explorer", version:"11.0", platform: "Windows"},
 },{
   id: "nope",
   est: {}
