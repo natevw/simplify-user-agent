@@ -51,9 +51,6 @@ function simplifyUserAgent(rawUA) {
     else ua.os = parts[0];
   }
   if (ua.os) ua.os = ua.os.split(' ')[0];
-  // TODO: reconsider the following fixups — probably better to just leave as-is…
-  if (ua.os && !ua.os.indexOf('iP')) ua.os = 'iOS';
-  if (ua.os === 'Macintosh') ua.os = 'macOS';
   
   return {
     browser: ua.app,
