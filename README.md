@@ -232,6 +232,30 @@ browserIsMatch(info, {$any:[
 ]});
 ```
 
+## Further reading
+
+Here's a small list of some unaffiliated projects that may fill similar roles as this.
+
+These third-party links are provided for your information only and are not endorsements.
+The quoted summaries have gathered from the projects' own descriptions of themselves.
+
+* https://browser-update.org/ — "a tool to unobtrusively notify visitors that they should update their web browser in order to use your website"
+* https://featurejs.com/ — "A Fast, simple and lightweight browser feature detection library written in plain JavaScript."
+* https://modernizr.com/ — "Modernizr tells you what HTML, CSS and JavaScript features the user’s browser has to offer.
+"
+* https://github.com/browserslist/browserslist — "The config to share target browsers and Node.js versions between different front-end tools."
+* https://babeljs.io/docs/en/babel-preset-env.html — "a smart [Babel.js] preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s)"
+
+I've also come across a few articles about User Agent strings and/or their history:
+
+* https://en.wikipedia.org/wiki/User_agent#Use_in_HTTP
+* https://webaim.org/blog/user-agent-string-history/
+* https://humanwhocodes.com/blog/2010/01/12/history-of-the-user-agent-string/
+* https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/
+* https://developer.chrome.com/docs/multidevice/user-agent/
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
+* https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537503(v=vs.85)
+
 
 ## MIT License, etc.
 
