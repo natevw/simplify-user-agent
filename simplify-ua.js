@@ -38,18 +38,24 @@ function simplifyUserAgent(rawUA) {
   
   var ua = {};
   if (products.length) {
+    ua = products[0];
     // honest strings tend to start with the most specific app, but
     // those faking since e.g. Mozilla/5.0 tend to use the opposite
-    if (products[0].app !== 'Mozilla') products.reverse();
+    if (ua.app !== 'Mozilla' && ua.app !== 'AppleWebKit') products.reverse();
     
     ua = products.pop();
     if (ua.app === 'like Gecko') {
       ua = products.pop();
     }
+    if (ua.app === 'Mobile Safari') {
+      ua.app = 'Safari';
+    }
     if (ua.app === 'Safari') {
-      var prev = products.pop();
+      var prev = products.pop() || {};
+      if (prev.app === 'Mobile') prev = products.pop() || prev;
+      
       if (prev.app === 'Version') ua.v = prev.v;
-      else if (prev.app === 'Chrome') ua = prev;
+      else if (ua.v === '537.36' || prev.app === 'Chrome') ua = prev;
       else ua.v = null;   // for Safari before 3.0
     }
   }
@@ -58,7 +64,8 @@ function simplifyUserAgent(rawUA) {
     var MM = [
       /(Windows|Macintosh|Android|Linux)/, function (m) { return {os:m[1]}; },
       /^\w*BSD$/, function (m) { return {os:'BSD'}; },
-      /^(\w+)\/([0-9.]+)$/, function (m) { return {app:m[1],v:m[2]}; },
+      /^iP.*$/, function (m) { return {os:m[0]}; },
+      /^(\w+)\/([0-9.].*)$/, function (m) { return {app:m[1],v:m[2]}; },
       /MSIE ([0-9.]+)/, function (m) { return {app:"MSIE",v:m[1]}; },
       /^rv:([0-9.]+)$/, function (m) { return {v:m[1]}; },
     ];
@@ -70,15 +77,16 @@ function simplifyUserAgent(rawUA) {
             m = s.match(re);
         if (m) return fn(m);
       }
-      return {'?':s};
+      //return {'?':s};
     }).filter(Boolean);
-    console.log(xtra);
+    //console.log(xtra);
     
     xtra.forEach(function (d) {
       if (d.os && !ua.os) ua.os = d.os;
-      if (d.v && ua.app === "MSIE" && !ua.v) ua.v = d.v;
-      else if (d.app === "Trident") d.app = "MSIE";
+      if (d.os === 'Android' && ua.os === 'Linux') ua.os = d.os;
+      if (d.app === "Trident") { d.app = "MSIE"; delete d.v; }
       if (d.app && ua.app === 'Mozilla') { ua.app = d.app; ua.v = d.v; }
+      if (d.v && ua.app === "MSIE") ua.v = d.v;
     });
   }
   

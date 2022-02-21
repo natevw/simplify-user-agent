@@ -103,7 +103,7 @@ module.exports = [{
   est: {browser:"Podcasts", version:"1575.1.2"},
 },{
   id: "Feedbin feed-id:4242 - 42 subscribers",
-  est: {browser:"Feedbin", version:null, platform:null},
+  est: {/*browser:"Feedbin",*/ version:null, platform:null},
 },{
   id: "UniversalFeedParser/5.2.1 +https://code.google.com/p/feedparser/",
   est: {browser:"UniversalFeedParser", version:"5.2.1", platform:null},
@@ -124,7 +124,7 @@ module.exports = [{
   est: {browser:"Chrome", $at:"97", platform:"Android"},
 },{
   id: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36 Edg/97.0.1072.76",
-  est: {browser:"Chrome", $at:"97", platform:"Windows"},
+  est: {browser:"Edg", $at:"97", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36",
   est: {browser:"Chrome", $at:"35", platform:"Macintosh"},
@@ -151,7 +151,7 @@ module.exports = [{
   est: {browser:"Firefox", $at:"91", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (compatible; BLEXBot/1.0; +http://example.com/)",
-  est: {browser:"BLEXBot", version:1.0, platform:null},
+  est: {browser:"BLEXBot", version:"1.0", platform:null},
 },{
   id: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36",
   est: {browser:"Chrome", $at:"72", platform:"Windows"},
@@ -202,13 +202,13 @@ module.exports = [{
   est: {browser:"Chrome", $at:"60", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 OPR/36.0.2130.32",
-  est: {browser:"Chrome", $at:"49", platform:"Windows"},
+  est: {browser:"OPR", $at:"36", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56",
-  est: {browser:"Chrome", $at:"98", platform:"Windows"},
+  est: {browser:"Edg", $at:"98", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)",
-  est: {browser:"Internet Explore", version:"9.0", platform:"Windows"},
+  est: {browser:"MSIE", version:"9.0", platform:"Windows"},
 },{
   id: "Apache-HttpClient/4.5.2 (Java/1.8.0_151)",
   est: {browser:"Apache-HttpClient", version:"4.5.2", platform:null},
