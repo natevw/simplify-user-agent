@@ -210,6 +210,13 @@ module.exports = [{
   id: "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)",
   est: {browser:"MSIE", version:"9.0", platform:"Windows"},
 },{
+  // this and next from https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/
+  id: "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) Mobile/14F89 Safari/603.2.4 EdgiOS/41.1.35.1",
+  est: {browser:"EdgiOS", $at:"41", platform:"iPhone"},
+},{
+  id: "Mozilla/5.0 (Linux; Android 8.0; Pixel XL Build/OPP3.170518.006) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.0 Mobile Safari/537.36 EdgA/41.1.35.1",
+  est: {browser:"EdgA", $at:"41", platform:"Android"},
+},{
   id: "Apache-HttpClient/4.5.2 (Java/1.8.0_151)",
   est: {browser:"Apache-HttpClient", version:"4.5.2", platform:null},
 },{
