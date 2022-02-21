@@ -1,5 +1,5 @@
 function simplifyUserAgent(rawUA) {
-  // expedient parse of http://tools.ietf.org/html/rfc2616#section-14.43
+  // expedient parse of https://datatracker.ietf.org/doc/html/rfc2616#section-14.43
   var products = [],
       comments = [],
       inComment = false;
