@@ -34,36 +34,51 @@ function simplifyUserAgent(rawUA) {
   });
   //console.log("-->", products);
   
-  var ua;
-  if (products.length > 1) {
-    ua = products[products.length - 1];
-    if (ua.app === 'Version') {     // TODO: handle other weird Opera strings, distinguish Mobile/Mini?
-      ua.app = products[0].app;
-    } else if (ua.app === 'Safari') {
-      var prev = products[products.length - 2];
+  var ua = {};
+  if (products.length) {
+    // honest strings tend to start with the most specific app, but
+    // those faking since e.g. Mozilla/5.0 tend to use the opposite
+    if (products[0].app !== 'Mozilla') products.reverse();
+    
+    ua = products.pop();
+    if (ua.app === 'like Gecko') {
+      ua = products.pop();
+    }
+    if (ua.app === 'Safari') {
+      var prev = products.pop();
       if (prev.app === 'Version') ua.v = prev.v;
       else if (prev.app === 'Chrome') ua = prev;
+      else ua.v = null;   // for Safari before 3.0
     }
-  } else if (comments.length && (
-    (ua = comments[0].match(/rv:([0-9.]+)/)) ||
-    (ua = comments[0].match(/MSIE ([0-9.]+)/))
-  )) {
-    // IE and most Trident wrappers pack *everything* into a comment
-    ua = {app:"Internet Explorer", v:ua[1]};
-  } else {
-    ua = products[0] || {};
   }
   
-  // TODO: this could be significantly more clever but works in common cases
   if (comments.length) {
-    var parts = comments[0].split(/;\s*/);
-    //console.log(parts);
-    if (parts[0] === 'compatible' && parts.length > 2) ua.os = parts[2];
-    else if (parts[1] === 'Trident/7.0' && (parts = parts[0].split(', ')).length > 2) ua.os = parts[2];
-    else if (parts[0] === 'Linux' && parts.length > 2) ua.os = parts[2];
-    else ua.os = parts[0];
+    var MM = [
+      /(Windows|Macintosh|Android|Linux)/, function (m) { return {os:m[1]}; },
+      /^\w*BSD$/, function (m) { return {os:'BSD'}; },
+      /^(\w+)\/([0-9.]+)$/, function (m) { return {app:m[1],v:m[2]}; },
+      /MSIE ([0-9.]+)/, function (m) { return {app:"Internet Explorer",v:m[1]}; },
+      /^rv:([0-9.]+)$/, function (m) { return {v:m[1]}; },
+    ];
+    
+    var xtra = comments[0].split(/;\s*/).map(function (s) {
+      for (var i = 0, len = MM.length; i < len; i += 2) {
+        var re = MM[i],
+            fn = MM[i + 1],
+            m = s.match(re);
+        if (m) return fn(m);
+      }
+      return {'?':s};
+    }).filter(Boolean);
+    console.log(xtra);
+    
+    xtra.forEach(function (d) {
+      if (d.os && !ua.os) ua.os = d.os;
+      if (d.v && ua.app === "Internet Explorer" && !ua.v) ua.v = d.v;
+      else if (d.app === "Trident") d.app = "Internet Explorer";
+      if (d.app && ua.app === 'Mozilla') { ua.app = d.app; ua.v = d.v; }
+    });
   }
-  if (ua.os) ua.os = ua.os.split(' ')[0];
   
   return {
     browser: ua.app || null,

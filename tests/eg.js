@@ -6,7 +6,7 @@ module.exports = [{
   est: {browser:"NCSA_Mosaic", version:"2.0", platform:"Windows"},
 },{
   id: "Mozilla/1.0 (Win3.1)",
-  est: {browser:"Mozilla", version:"1.0", platform:"Windows"},
+  est: {browser:"Mozilla", version:"1.0"},
 },{
   id: "Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)",
   est: {browser:"Internet Explorer", version:"2.0", platform:"Windows"},
@@ -21,10 +21,10 @@ module.exports = [{
   est: {browser:"Camino", version:"0.8.1", platform:"Macintosh"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.8.1.8) Gecko/20071008 SeaMonkey/1.0",
-  est: {browser:"Seamonkey", version:"1.0", platform:"Windows"},
+  est: {browser:"SeaMonkey", version:"1.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (compatible; Konqueror/3.2; FreeBSD) (KHTML, like Gecko)",
-  est: {browser:"Konqueror", version:"3.2", platform:"FreeBSD"},
+  est: {browser:"Konqueror", version:"3.2", platform:"BSD"},
 },{
   id: "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.51",
   est: {},
@@ -36,7 +36,7 @@ module.exports = [{
   est: {browser:"Opera", version:"9.51", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5",
-  est: {browser:"Safari", version:"85.5", platform:"Macintosh"},
+  est: {browser:"Safari", version:null, platform:"Macintosh"},    // NOTE: Safari pre-3.0 didn't include marketing version
 },{
   id: "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)",
   est: {browser:"Internet Explorer", version:"8.0", platform:"Windows"},
@@ -228,4 +228,7 @@ module.exports = [{
 },{
   id: "nope",
   est: {browser:"nope", version:null, platform:null}
+},{
+  id: "(nope)",
+  est: {browser:null, version:null, platform:null}
 }];
