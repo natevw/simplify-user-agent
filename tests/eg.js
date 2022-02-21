@@ -19,13 +19,13 @@ module.exports = [{
   // afaict this is a clear violation of https://datatracker.ietf.org/doc/html/rfc2616#section-3.8
   // so I'm not particularly inclined to support this — but maybe somehow for pragramatic purposes?
   id: "Feed Wrangler/1.0 (42 subscribers; feed-id=12334; http://example.com; Allow like Gecko)",
-  est: {browser:"Feed Wrangler", platform:null},
+  est: {browser:"Feed Wrangler", version:"1.0", platform:null},
 },{
   id: "Superfeedr bot/2.0 http://example.com - Make your feeds realtime: get in touch - feed-id:123456",
-  est: {browser:"Superfeedr", platform:null},
+  est: {browser:"Superfeedr bot", version:"2.0", platform:null},
 },{
   id: "Sogou web spider/4.0(+http://www.example.com/docs/help/webmasters.htm#07)",
-  est: {browser:"Sogou", platform:null},
+  est: {browser:"Sogou web spider", version:"4.0", platform:null},
 },{
   id: "Go-http-client/1.1",
   est: {browser:"Go-http-client", version:"1.1", platform:null},

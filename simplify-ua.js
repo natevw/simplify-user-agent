@@ -1,24 +1,38 @@
 function simplifyUserAgent(rawUA) {
-  // expedient parse of https://datatracker.ietf.org/doc/html/rfc2616#section-14.43
-  var products = [],
-      comments = [],
-      inComment = false;
-  rawUA.split(' ').forEach(function (chunk) {
-    if (!inComment && chunk[0] === '(') {
-      inComment = true;
-      comments.push('');
-    }
-    
-    if (inComment) comments[comments.length - 1] += ' ' + chunk;
-    else products.push(chunk);
-    
-    // NOTE: HTTP `comment` syntax allows quoted text which can contain parentheses!
-    //       For simplicity we won't handle that until/unless necessary in practice.
-    if (chunk[chunk.length-1] === ')') inComment = false;
+  // expedient [AND pragmatic!] parse of https://datatracker.ietf.org/doc/html/rfc2616#section-14.43
+  // [i.e. we support some seemingly-wrong agent behavior around tokens and whitespace, etc.]
+  var comments = [];
+  // NOTE: HTTP `comment` syntax allows quoted text which can contain parentheses!
+  //       For simplicity we won't handle that until/unless necessary in practice.
+  rawUA = rawUA.replace(/\s*\((.*?)\)\s*/g, function (_,s) {
+    comments.push(s);
+    return ' ';
   });
-  comments = comments.map(function (s) { return s.trim().slice(1,-1); });
-  products = products.map(function (s) { var a = s.split('/'); return {app:a[0], v:a[1]}; }).filter(function (ua) { return Boolean(ua.v); });
+  var products = rawUA.split(/\s+/).map(function (s) {
+    var a = s.split('/');
+    return {app:a[0], v:a[1]};
+  });
   //console.log(products, comments);
+  
+  // this rejoins broken tokens like "Mobile Safari/432.1" or "Feed Wrangler/1.0"
+  // while also generally cleaning out any leftover empty parts from split above.
+  var appParts = [];
+  products = products.map(function (ua) {
+    if (ua.app) {
+      appParts.push(ua.app);
+    }
+    if (ua.v) {
+      ua.app = appParts.join(' ');
+      appParts = [];
+      return ua;
+    } else {
+      return null;
+    }
+  }).filter(Boolean);
+  if (appParts.length) products.push({
+    app: appParts.join(' ')
+  });
+  //console.log("-->", products);
   
   var ua;
   if (products.length > 1) {
@@ -52,9 +66,9 @@ function simplifyUserAgent(rawUA) {
   if (ua.os) ua.os = ua.os.split(' ')[0];
   
   return {
-    browser: ua.app,
-    version: ua.v,
-    platform: ua.os
+    browser: ua.app || null,
+    version: ua.v || null,
+    platform: ua.os || null
   };
 }
 
