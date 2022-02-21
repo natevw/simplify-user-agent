@@ -204,6 +204,12 @@ module.exports = [{
   id: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 OPR/36.0.2130.32",
   est: {browser:"Chrome", $at:"49", platform:"Windows"},
 },{
+  id: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56",
+  est: {browser:"Chrome", $at:"98", platform:"Windows"},
+},{
+  id: "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)",
+  est: {browser:"Internet Explore", version:"9.0", platform:"Windows"},
+},{
   id: "Apache-HttpClient/4.5.2 (Java/1.8.0_151)",
   est: {browser:"Apache-HttpClient", version:"4.5.2", platform:null},
 },{
