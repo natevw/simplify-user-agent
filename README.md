@@ -246,7 +246,7 @@ The quoted summaries have gathered from the projects' own descriptions of themse
 * https://github.com/browserslist/browserslist — "The config to share target browsers and Node.js versions between different front-end tools."
 * https://babeljs.io/docs/en/babel-preset-env.html — "a smart [Babel.js] preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s)"
 
-I've also come across a few articles about User Agent strings and/or their history:
+I've also come across a few articles about User Agent strings and/or their history and/or future:
 
 * https://en.wikipedia.org/wiki/User_agent#Use_in_HTTP
 * https://webaim.org/blog/user-agent-string-history/
@@ -255,6 +255,7 @@ I've also come across a few articles about User Agent strings and/or their histo
 * https://developer.chrome.com/docs/multidevice/user-agent/
 * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
 * https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537503(v=vs.85)
+* https://docs.microsoft.com/en-us/microsoft-edge/web-platform/user-agent-guidance
 
 
 ## MIT License, etc.
