@@ -38,7 +38,6 @@ function simplifyUserAgent(rawUA) {
     ua = {app:"Internet Explorer", v:ua[1]};
   } else {
     ua = products[0] || {};
-    if (ua.app === 'Mozilla') ua.app = "Netscape";
   }
   
   // TODO: this could be significantly more clever but works in common cases
