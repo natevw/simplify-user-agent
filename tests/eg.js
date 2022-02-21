@@ -2,6 +2,48 @@ module.exports = [{
   id: "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)",
   est: {browser:"Internet Explorer", version:"4.01", platform: "Windows"},
 },{
+  id: "NCSA_Mosaic/2.0 (Windows 3.1)",
+  est: {browser:"NCSA_Mosaic", version:"2.0", platform: "Windows"},
+},{
+  id: "Mozilla/1.0 (Win3.1)",
+  est: {browser:"Mozilla", version:"1.0", platform: "Windows"},
+},{
+  id: "Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)",
+  est: {browser:"Internet Explorer", version:"2.0", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.1) Gecko/20020826",
+  est: {browser:"Gecko", version:"20020826", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; sv-SE; rv:1.7.5) Gecko/20041108 Firefox/1.0",
+  est: {browser:"Firefox", version:"1.0", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.7.2) Gecko/20040825 Camino/0.8.1",
+  est: {browser:"Camino", version:"0.8.1", platform: "Macintosh"},
+},{
+  id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.8.1.8) Gecko/20071008 SeaMonkey/1.0",
+  est: {browser:"Seamonkey", version:"1.0", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (compatible; Konqueror/3.2; FreeBSD) (KHTML, like Gecko)",
+  est: {browser:"Konqueror", version:"3.2", platform: "FreeBSD"},
+},{
+  id: "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.51",
+  est: {},
+},{
+  id: "Mozilla/5.0 (Windows NT 6.0; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.51",
+  est: {},
+},{
+  id: "Opera/9.51 (Windows NT 5.1; U; en)",
+  est: {browser:"Opera", version:"9.51", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5",
+  est: {browser:"Safari", version:"85.5", platform: "Macintosh"},
+},{
+  id: "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)",
+  est: {browser:"Internet Explorer", version:"8.0", platform: "Windows"},
+},{
+  id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13",
+  est: {browser:"Chrome", $at:"0.2", platform: "Windows"},
+},{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
   est: {browser:"Chrome", $at:"97", platform: "Macintosh"},
 },{
