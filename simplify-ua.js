@@ -6,7 +6,7 @@ function simplifyUserAgent(rawUA) {
   //       For simplicity we won't handle that until/unless necessary in practice.
   rawUA = rawUA.replace(/\s*\((.*?)\)\s*/g, function (_,s) {
     comments.push(s);
-    return ' ';
+    return ' # ';
   });
   var products = rawUA.split(/\s+/).map(function (s) {
     var a = s.split('/');
@@ -18,13 +18,15 @@ function simplifyUserAgent(rawUA) {
   // while also generally cleaning out any leftover empty parts from split above.
   var appParts = [];
   products = products.map(function (ua) {
+    if (ua.app === '#') ua = {v:-1};
     if (ua.app) {
       appParts.push(ua.app);
     }
     if (ua.v) {
       ua.app = appParts.join(' ');
       appParts = [];
-      return ua;
+      if (ua.v === -1) delete ua.v;
+      return (ua.app) ? ua : null;
     } else {
       return null;
     }
