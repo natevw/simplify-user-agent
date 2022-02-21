@@ -1,30 +1,30 @@
 module.exports = [{
   id: "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)",
-  est: {browser:"Internet Explorer", version:"4.01", platform: "Windows"},
+  est: {browser:"Internet Explorer", version:"4.01", platform:"Windows"},
 },{
   id: "NCSA_Mosaic/2.0 (Windows 3.1)",
-  est: {browser:"NCSA_Mosaic", version:"2.0", platform: "Windows"},
+  est: {browser:"NCSA_Mosaic", version:"2.0", platform:"Windows"},
 },{
   id: "Mozilla/1.0 (Win3.1)",
-  est: {browser:"Mozilla", version:"1.0", platform: "Windows"},
+  est: {browser:"Mozilla", version:"1.0", platform:"Windows"},
 },{
   id: "Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)",
-  est: {browser:"Internet Explorer", version:"2.0", platform: "Windows"},
+  est: {browser:"Internet Explorer", version:"2.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.1) Gecko/20020826",
-  est: {browser:"Gecko", version:"20020826", platform: "Windows"},
+  est: {browser:"Gecko", version:"20020826", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; sv-SE; rv:1.7.5) Gecko/20041108 Firefox/1.0",
-  est: {browser:"Firefox", version:"1.0", platform: "Windows"},
+  est: {browser:"Firefox", version:"1.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.7.2) Gecko/20040825 Camino/0.8.1",
-  est: {browser:"Camino", version:"0.8.1", platform: "Macintosh"},
+  est: {browser:"Camino", version:"0.8.1", platform:"Macintosh"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.8.1.8) Gecko/20071008 SeaMonkey/1.0",
-  est: {browser:"Seamonkey", version:"1.0", platform: "Windows"},
+  est: {browser:"Seamonkey", version:"1.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (compatible; Konqueror/3.2; FreeBSD) (KHTML, like Gecko)",
-  est: {browser:"Konqueror", version:"3.2", platform: "FreeBSD"},
+  est: {browser:"Konqueror", version:"3.2", platform:"FreeBSD"},
 },{
   id: "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.51",
   est: {},
@@ -33,25 +33,25 @@ module.exports = [{
   est: {},
 },{
   id: "Opera/9.51 (Windows NT 5.1; U; en)",
-  est: {browser:"Opera", version:"9.51", platform: "Windows"},
+  est: {browser:"Opera", version:"9.51", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/85.7 (KHTML, like Gecko) Safari/85.5",
-  est: {browser:"Safari", version:"85.5", platform: "Macintosh"},
+  est: {browser:"Safari", version:"85.5", platform:"Macintosh"},
 },{
   id: "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)",
-  est: {browser:"Internet Explorer", version:"8.0", platform: "Windows"},
+  est: {browser:"Internet Explorer", version:"8.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13",
-  est: {browser:"Chrome", $at:"0.2", platform: "Windows"},
+  est: {browser:"Chrome", $at:"0.2", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
-  est: {browser:"Chrome", $at:"97", platform: "Macintosh"},
+  est: {browser:"Chrome", $at:"97", platform:"Macintosh"},
 },{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Safari/605.1.15",
-  est: {browser:"Safari", version:"15.2", platform: "Macintosh"},
+  est: {browser:"Safari", version:"15.2", platform:"Macintosh"},
 },{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:96.0) Gecko/20100101 Firefox/96.0",
-  est: {browser:"Firefox", $at:"96", platform: "Macintosh"},
+  est: {browser:"Firefox", $at:"96", platform:"Macintosh"},
 },{
   id: "NetNewsWire (RSS Reader; https://netnewswire.com/)",
   est: {browser:"NetNewsWire", version:null, platform:null},
@@ -85,19 +85,19 @@ module.exports = [{
   est: {browser:"-", version:null, platform:null},
 },{
   id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:80.0) Gecko/20100101 Firefox/80.0",
-  est: {browser:"Firefox", $at:"80", platform: "Macintosh"},
+  est: {browser:"Firefox", $at:"80", platform:"Macintosh"},
 },{
   id: "python-requests/2.27.1",
   est: {browser:"python-requests", version:"2.27.1", platform:null},
 },{
   id: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
-  est: {browser:"Safari", platform: "iPhone"},
+  est: {browser:"Safari", platform:"iPhone"},
 },{
   id: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
-  est: {browser:"Chrome", $at:"83", platform: "Linux"},
+  est: {browser:"Chrome", $at:"83", platform:"Linux"},
 },{
   id: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50",
-  est: {browser:"OPR", $at:"82", platform: "Windows"},
+  est: {browser:"OPR", $at:"82", platform:"Windows"},
 },{
   id: "Podcasts/1575.1.2 CFNetwork/1240.0.4 Darwin/20.6.0",
   est: {browser:"Podcasts", version:"1575.1.2"},
@@ -215,10 +215,10 @@ module.exports = [{
 },{
   // see https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537503(v=vs.85)
   id: "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko",
-  est: {browser:"Internet Explorer", version:"11.0", platform: "Windows"},
+  est: {browser:"Internet Explorer", version:"11.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
-  est: {browser:"Internet Explorer", version:"11.0", platform: "Windows"},
+  est: {browser:"Internet Explorer", version:"11.0", platform:"Windows"},
 },{
   id: "nope",
   est: {browser:"nope", version:null, platform:null}
