@@ -1,6 +1,7 @@
 var _ = require("../check-ua.js");
 
-console.log("compareVersions check:", [
+var cvc;
+console.log("compareVersions check:", (cvc = [
   _.compareVersions('1.0.0', '1.0.1') === -1,
   _.compareVersions('1.0.1', '1.0.0') === +1,
   _.compareVersions('1', '1.0.1') === 0,
@@ -13,9 +14,10 @@ console.log("compareVersions check:", [
   _.compareVersions('1.1', '1.1.1') === 0,
   _.compareVersions('1', '1.1.1') === 0,
   _.compareVersions('1.0', '1.1.1') === -1,
-].every(Boolean) ? "okay" : "BAD RESULT!");
-  
-console.log(" browserIsMatch check:", [
+].every(Boolean)) ? "okay" : "BAD RESULT!");
+
+var bim;
+console.log(" browserIsMatch check:", (bim = [
   _.browserIsMatch({version:'3.2.1',browser:'UA'}, {$not:{browser:'IE'}}),
   !_.browserIsMatch({version:'3.2.1',browser:'UA'}, {$not:{browser:'UA'}}),
   _.browserIsMatch({version:'3.2.1',browser:'UA'}, {browser:'UA'}),
@@ -35,4 +37,6 @@ console.log(" browserIsMatch check:", [
     {browser:"Firefox", $gt:'90.0'},
     {browser:"Internet Explorer", $lt:'12'},
   ]}),
-].every(Boolean) ? "okay" : "BAD RESULT!");
+].every(Boolean)) ? "okay" : "BAD RESULT!");
+
+process.exit(!cvc + !bim);

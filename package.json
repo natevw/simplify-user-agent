@@ -4,7 +4,7 @@
   "description": "navigator.userAgent string parsing and matching helpers",
   "main": "main.js",
   "scripts": {
-    "test": "node tests/ua.js && node tests/vv.js"
+    "test": "node tests/vv.js && node tests/ua.js"
   },
   "repository": {
     "type": "git",
