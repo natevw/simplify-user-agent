@@ -35,7 +35,7 @@ console.log(" browserIsMatch check:", (bim = [
   _.browserIsMatch({version:'96.0.3'}, {$not:{$lt:'96'}}),
   _.browserIsMatch({browser:"Firefox", version:'96.0.3'}, {$any:[
     {browser:"Firefox", $gt:'90.0'},
-    {browser:"Internet Explorer", $lt:'12'},
+    {browser:"MSIE", $lt:'12'},
   ]}),
 ].every(Boolean)) ? "okay" : "BAD RESULT!");
 

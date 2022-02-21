@@ -24,7 +24,7 @@ but the older browsers you might be concerned about do not. So classic style it 
   console.log("Version:", uaInfo.version);
   console.log("Platform:", uaInfo.platform);
 
-  if (uaInfo.browser === "Internet Explorer" && uaInfo.version < "9") { // BUG!!
+  if (uaInfo.browser === "MSIE" && uaInfo.version < "9") { // BUG!!
     alert("You're using a fairly old version of IE!");
   }
 </script>
@@ -41,7 +41,7 @@ To help with this, this project has an additional library for *matching* in simp
 <script>
   var ua = simplifyUserAgent(navigator.userAgent);
   if (simplifyUserAgent.browserIsMatch(ua, { $any: [
-    {browser: "Internet Explorer", $lt: '11'},
+    {browser: "MSIE", $lt: '11'},
     {browser: "Safari", $lt: '13'},
     {browser: "Opera", os: "Linux"},
   ]}) alert("Please consider upgrading your browser!");
@@ -94,7 +94,7 @@ Takes in a browser string that might look something like `"Mozilla/4.0 (compatib
 
 ```
 {
-  "browser": "Internet Explorer",
+  "browser": "MSIE",
   "version": "4.01",
   "platform": "Windows"
 }
@@ -228,7 +228,7 @@ browserIsMatch(info, {$gt:'96.0.2'});
 browserIsMatch(info, {$not:{$lt:'96'}});
 browserIsMatch(info, {$any:[
   {browser:"Firefox", $gt:'90.0'},
-  {browser:"Internet Explorer", $lt:'12'},
+  {browser:"MSIE", $lt:'12'},
 ]});
 ```
 

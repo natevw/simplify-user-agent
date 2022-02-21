@@ -57,7 +57,7 @@ function simplifyUserAgent(rawUA) {
       /(Windows|Macintosh|Android|Linux)/, function (m) { return {os:m[1]}; },
       /^\w*BSD$/, function (m) { return {os:'BSD'}; },
       /^(\w+)\/([0-9.]+)$/, function (m) { return {app:m[1],v:m[2]}; },
-      /MSIE ([0-9.]+)/, function (m) { return {app:"Internet Explorer",v:m[1]}; },
+      /MSIE ([0-9.]+)/, function (m) { return {app:"MSIE",v:m[1]}; },
       /^rv:([0-9.]+)$/, function (m) { return {v:m[1]}; },
     ];
     
@@ -74,8 +74,8 @@ function simplifyUserAgent(rawUA) {
     
     xtra.forEach(function (d) {
       if (d.os && !ua.os) ua.os = d.os;
-      if (d.v && ua.app === "Internet Explorer" && !ua.v) ua.v = d.v;
-      else if (d.app === "Trident") d.app = "Internet Explorer";
+      if (d.v && ua.app === "MSIE" && !ua.v) ua.v = d.v;
+      else if (d.app === "Trident") d.app = "MSIE";
       if (d.app && ua.app === 'Mozilla') { ua.app = d.app; ua.v = d.v; }
     });
   }

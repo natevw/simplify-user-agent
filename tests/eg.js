@@ -1,6 +1,6 @@
 module.exports = [{
   id: "Mozilla/4.0 (compatible; MSIE 4.01; Windows 98)",
-  est: {browser:"Internet Explorer", version:"4.01", platform:"Windows"},
+  est: {browser:"MSIE", version:"4.01", platform:"Windows"},
 },{
   id: "NCSA_Mosaic/2.0 (Windows 3.1)",
   est: {browser:"NCSA_Mosaic", version:"2.0", platform:"Windows"},
@@ -9,7 +9,7 @@ module.exports = [{
   est: {browser:"Mozilla", version:"1.0"},
 },{
   id: "Mozilla/1.22 (compatible; MSIE 2.0; Windows 95)",
-  est: {browser:"Internet Explorer", version:"2.0", platform:"Windows"},
+  est: {browser:"MSIE", version:"2.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.1) Gecko/20020826",
   est: {browser:"Gecko", version:"20020826", platform:"Windows"},
@@ -39,7 +39,7 @@ module.exports = [{
   est: {browser:"Safari", version:null, platform:"Macintosh"},    // NOTE: Safari pre-3.0 didn't include marketing version
 },{
   id: "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)",
-  est: {browser:"Internet Explorer", version:"8.0", platform:"Windows"},
+  est: {browser:"MSIE", version:"8.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.27 Safari/525.13",
   est: {browser:"Chrome", $at:"0.2", platform:"Windows"},
@@ -175,7 +175,7 @@ module.exports = [{
   est: {browser:"Safari", version:"15.1", platform:"iPhone"},
 },{
   id: "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)",
-  est: {browser:"Internet Explorer", version:"6.0", platform:"Windows"},
+  est: {browser:"MSIE", version:"6.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (Linux; U; Android 4.4.2; en-US; HM NOTE 1W Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.0.5.850 U3/0.8.0 Mobile Safari/534.30",
   est: {platform:"Android"},
@@ -221,10 +221,10 @@ module.exports = [{
 },{
   // see https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537503(v=vs.85)
   id: "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko",
-  est: {browser:"Internet Explorer", version:"11.0", platform:"Windows"},
+  est: {browser:"MSIE", version:"11.0", platform:"Windows"},
 },{
   id: "Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
-  est: {browser:"Internet Explorer", version:"11.0", platform:"Windows"},
+  est: {browser:"MSIE", version:"11.0", platform:"Windows"},
 },{
   id: "nope",
   est: {browser:"nope", version:null, platform:null}
