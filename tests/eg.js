@@ -159,6 +159,9 @@ module.exports = [{
   id: "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36",
   est: {browser:"Chrome", $at:"72", platform:"Windows"},
 },{
+  id: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36",
+  est: {browser:"Chrome", version:"98.0.4758.102", platform:"Macintosh"},
+},{
   id: "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.500.29 Safari/537.36",
   est: {browser:"Chrome", $at:"79", platform:null},
 },{
