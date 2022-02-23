@@ -1,6 +1,6 @@
 {
   "name": "simplify-user-agent",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "navigator.userAgent string parsing and matching helpers",
   "main": "main.js",
   "scripts": {
