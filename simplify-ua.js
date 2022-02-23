@@ -1,4 +1,4 @@
-/* @copyright © 2022 Nathan Vander Wilt — https://github.com/natevw/simplify-user-agent */
+/*! @copyright © 2022 Nathan Vander Wilt — https://github.com/natevw/simplify-user-agent */
 
 function simplifyUserAgent(rawUA) {
   // expedient [AND pragmatic!] parse of https://datatracker.ietf.org/doc/html/rfc2616#section-14.43
