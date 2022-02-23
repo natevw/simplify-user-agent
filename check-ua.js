@@ -1,3 +1,4 @@
+/* © 2022 Nathan Vander Wilt — https://github.com/natevw/simplify-user-agent */
 
 (function (exportObject) {
   function compareVersions(aVersion, bVersion) {   // so: 1.0.0 < 1.0.1, but 1 == 1.0.1

@@ -1,3 +1,5 @@
+/* © 2022 Nathan Vander Wilt — https://github.com/natevw/simplify-user-agent */
+
 function simplifyUserAgent(rawUA) {
   // expedient [AND pragmatic!] parse of https://datatracker.ietf.org/doc/html/rfc2616#section-14.43
   // [i.e. we support some seemingly-wrong agent behavior around tokens and whitespace, etc.]
