@@ -11,7 +11,8 @@ e.g. is the browser "Chrome or Firefox or Internet Explorer after version 8"?
 
 ## Example usage
 
-Include the JS you need.
+Use a minified browser build via `<script src="simplify-user-agent.min.js"></script>`,
+or include the specific/separate JS files you need from this repository.
 
 I prefer [modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules),
 but the older browsers you might be concerned about do not. So classic style it is:

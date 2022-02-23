@@ -4,7 +4,8 @@
   "description": "navigator.userAgent string parsing and matching helpers",
   "main": "main.js",
   "scripts": {
-    "test": "node tests/vv.js && node tests/ua.js"
+    "test": "node tests/vv.js && node tests/ua.js",
+    "build": "bash -c 'npx terser --compress --mangle --safari10 --ie8 --comments /@copyright/ <(cat simplify-ua.js; tail -n+2 check-ua.js) > simplify-user-agent.min.js'"
   },
   "repository": {
     "type": "git",
