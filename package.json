@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "node tests/vv.js && node tests/ua.js",
-    "build": "npx terser simplify-ua.js check-ua.js --compress --toplevel --mangle reserved=['simplifyUserAgent'] --define window=true --safari10 --ie8 > simplify-user-agent.min.js"
+    "build": "npx terser simplify-ua.js check-ua.js --compress --comments /^!/ --toplevel --mangle reserved=['simplifyUserAgent'] --define window=true --safari10 --ie8 > simplify-user-agent.min.js"
   },
   "repository": {
     "type": "git",
